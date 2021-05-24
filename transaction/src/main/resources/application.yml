@@ -1,0 +1,26 @@
+spring:
+  rabbitmq:
+    ####连接地址
+    host: 119.29.75.165
+    ####端口号
+    port: 5672
+    ####账号
+    username: ponderyao
+    ####密码
+    password: 103123Yzp
+    ### 地址
+    virtual-host: /transaction_distributed
+    ###开启消息确认机制 confirms
+    publisher-confirm-type: correlated
+    publisher-returns: true
+  #数据库连接信息
+  datasource:
+    name: webserver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3308/webserver?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: 103123Yzp
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+  druid:
+    validation-query: SELECT 1
